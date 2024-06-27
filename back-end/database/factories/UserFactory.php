@@ -17,7 +17,7 @@ class UserFactory extends Factory
     /**
      * The current password being used by the factory.
      */
-    protected static ?string $password;
+    //protected static ?string $password;
 
     /**
      * Define the model's default state.
@@ -27,46 +27,46 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
+            
+            'lastName' => fake()->lastName(),
+            'firstName' => fake()->firstName(),
+            'address' => fake()->address(),
+            'phoneNumber' => fake()->phoneNumber(),
             'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
-            'two_factor_secret' => null,
-            'two_factor_recovery_codes' => null,
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
             'remember_token' => Str::random(10),
-            'profile_photo_path' => null,
-            'current_team_id' => null,
+           
         ];
     }
+}
 
-    /**
-     * Indicate that the model's email address should be unverified.
-     */
+ /*   
     public function unverified(): static
     {
         return $this->state(fn (array $attributes) => [
-            'email_verified_at' => null,
-        ]);
-    }
+             'email_verified_at' => null,
+         ]);
+    
+     } */
+    
+    
+     /* * Indicate that the user should have a personal team.
+     */ 
+//     public function withPersonalTeam(callable $callback = null): static
+//     {
+//         if (! Features::hasTeamFeatures()) {
+//             return $this->state([]);
+//         }
 
-    /**
-     * Indicate that the user should have a personal team.
-     */
-    public function withPersonalTeam(callable $callback = null): static
-    {
-        if (! Features::hasTeamFeatures()) {
-            return $this->state([]);
-        }
-
-        return $this->has(
-            Team::factory()
-                ->state(fn (array $attributes, User $user) => [
-                    'name' => $user->name.'\'s Team',
-                    'user_id' => $user->id,
-                    'personal_team' => true,
-                ])
-                ->when(is_callable($callback), $callback),
-            'ownedTeams'
-        );
-    }
-}
+//         return $this->has(
+//             Team::factory()
+//                 ->state(fn (array $attributes, User $user) => [
+//                     'name' => $user->name.'\'s Team',
+//                     'user_id' => $user->id,
+//                     'personal_team' => true,
+//                 ])
+//                 ->when(is_callable($callback), $callback),
+//             'ownedTeams'
+//         );
+//     }
+// }
