@@ -5,30 +5,15 @@ import NavBar from '@/components/NavBar.vue'
 </script>
 
 <template>
-  <body>
-  <header>
-  
-    <!-- <NavBar /> -->
+
     <div class="wrapper">
-      <NavBar />
-      
-      <!-- <HomeView msg="You did it!" /> -->
-      
-      <!-- <div id="app">
-    <router-view></router-view>
-  </div>
-   -->
-      <!-- <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink> 
-         <RouterLink to="/Nav">Nav</RouterLink>
-      </nav> -->
+    <NavBar />
+
     </div>
-  </header>
-</body>
+
   <RouterView />
 </template>
-
+<!-- 
 <style scoped>
  .wrapper {
     
@@ -40,7 +25,6 @@ import NavBar from '@/components/NavBar.vue'
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
 }
 
 nav {
@@ -72,7 +56,6 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
   }
 
   .logo {
@@ -83,11 +66,9 @@ nav a:first-of-type {
 
   nav {
     text-align: left;
-    margin-left: -1rem;
     font-size: 1rem;
 
-    padding: 1rem 0;
     margin-top: 1rem;
   }
 } */
-</style>
+</style> -->
