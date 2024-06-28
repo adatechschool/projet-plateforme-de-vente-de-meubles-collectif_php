@@ -8,3 +8,6 @@ use Illuminate\Support\Facades\Route;
 // })->middleware('auth:sanctum');
 
 //Route::apiResource("users"); // Les routes "users.*" de l'API
+
+
+//CHEMIN + SEXY CHOCOLAT DES URLS //
