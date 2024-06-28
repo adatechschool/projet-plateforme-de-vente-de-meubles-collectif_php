@@ -10,18 +10,18 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::create('category', function (Blueprint $table) {
-            $table->id()->primary();
-            $table->string('type');
-        });
-    }
+        {
+            Schema::create('categories', function (Blueprint $table) {
+                $table->id()->primary();
+                $table->string('type');
+            });
+        }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('category');
+        Schema::dropIfExists('categories');
     }
 };
