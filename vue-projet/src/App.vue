@@ -1,17 +1,19 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
- 
+import FooterFeed from '@/components/FooterFeed.vue'
 import NavBar from '@/components/NavBar.vue'
 </script>
 
 <template>
-
+  
     <div class="wrapper">
     <NavBar />
 
     </div>
 
+
   <RouterView />
+  <FooterFeed />
 </template>
 <!-- 
 <style scoped>
