@@ -1,0 +1,43 @@
+1 - Récupérer les données
+
+Pour créer une base de données et récupérer les données présentes dans le code, afin que nous ayons tous et toutes les mêmes données, faire les commandes suivantes :
+ php artisan migrate -> créer une table
+ php artisan migrate:status -> permet de voir les migrations effectuées
+
+ Pour remplir les tables
+ php artisan db:seed
+
+2 - Créer des tables et des données supplémentaires
+
+Mêmes commandes qu'au-dessus + la création d'un nouveau modèle de table
+php artisan migrate
+php artisan make:model
+php artisan db:seed
+
+3 - La configuration
+
+Le fichier .env est personnel à chaque ordi, vous devrez peut-être le modifier de manière individuelle
+D'autres paramètres de configuration sont accessibles dans le php.ini. 
+Pour trouver la localisation du php.ini, faites la commande
+php --info, afin de bien modifier le bon php.ini (faire une recherche par mot clef avec CTRL + f)
+
+4 - Ne pas toucher
+
+Laisser le vendor dans le gitignore, il ne doit pas être modifié
+
+5 - Commandes utiles
+
+php artisan serve -> pour lancer le serveur (n'oubliez pas d'ouvrir Laragon ou Xampp)
+php artisan migrate:reset -> supprime toutes les tables (parfois, c'est lus simple)
+php artisan migrate:rollback -> supprime la dernière migration
+php artisan make:controller -> créer un controller
+php artisan make:model -mrc 'Nom du fichier' -> permet de créer une migration, un modèle et un controller en une commande
+On a créé une table basket (panier) avec ce procédé, on ne l'a pas remplie, donc, si ça vous chauffe, allez-y ! ;)
+
+6 - A faire (selon nous)
+
+Créer les controllers
+Faire les routes dans le fichier API (les rendre plus sexy)
+Rajouter une colonne dans la table categories et products pour mettre des photos
+
+
