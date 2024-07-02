@@ -11,3 +11,8 @@ use Illuminate\Support\Facades\Route;
 
 
 //CHEMIN + SEXY CHOCOLAT DES URLS //
+
+
+use App\Http\Controllers\API\UserController;
+
+Route::apiResource("users", UserController::class); // Les routes "users.*" de l'API
