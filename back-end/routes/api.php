@@ -41,3 +41,4 @@ Route::apiResource('users', UserController::class);
     Route::post('cart', [CartController::class, 'store']);
     Route::put('cart/{id}', [CartController::class, 'update']);
     Route::delete('cart/{id}', [CartController::class, 'destroy']);
+

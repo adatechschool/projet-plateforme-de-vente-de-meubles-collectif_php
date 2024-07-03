@@ -10,7 +10,7 @@ import NavBar from '@/components/NavBar.vue'
     <NavBar />
 
     </div>
-
+    <Cart />
 
   <RouterView />
   <FooterFeed />
