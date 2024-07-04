@@ -1,7 +1,8 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
+  /*max-width: 1280px;*/
+  margin-top :2vh;
   padding: 2rem;
   font-weight: normal;
 }
