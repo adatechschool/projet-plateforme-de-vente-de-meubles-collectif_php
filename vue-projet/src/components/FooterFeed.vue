@@ -4,8 +4,12 @@
       <div class="col-6 col-md-2 mb-3">
         <h5>A propos</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Equipe Lebonmeuble</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Notre histoire</a></li>
+          <li class="nav-item mb-2">
+            <a href="/team" class="nav-link p-0 text-muted">Equipe Lebonmeuble</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Notre histoire</a>
+          </li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Partenaires</a></li>
         </ul>
       </div>
@@ -13,14 +17,22 @@
         <h5>Services</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Suivi commande</a></li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Suivi commande</a>
+          </li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
         </ul>
       </div>
       <div class="col-6 col-md-2 mb-3">
         <h5>En Savoir Plus</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="https://github.com/adatechschool/projet-plateforme-de-vente-de-meubles-collectif_php" class="nav-link p-0 text-muted">Github<img src="@/assets/img/git.png" style="height:25px"></a></li>
+          <li class="nav-item mb-2">
+            <a
+              href="https://github.com/adatechschool/projet-plateforme-de-vente-de-meubles-collectif_php"
+              class="nav-link p-0 text-muted"
+              >Github<img src="@/assets/img/git.png" style="height: 25px"
+            /></a>
+          </li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
         </ul>
@@ -31,7 +43,7 @@
           <p>Monthly digest of what's new and exciting from us.</p>
           <div class="d-flex flex-column flex-sm-row w-100 gap-2">
             <label for="newsletter1" class="visually-hidden">Email address</label>
-            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
             <button class="btn btn-primary" type="button">Subscribe</button>
           </div>
         </form>
@@ -49,8 +61,6 @@ export default {
 }
 </script>
 
-
- 
 <style scoped>
 footer {
   margin-top: auto;
@@ -58,4 +68,3 @@ footer {
   padding-bottom: 1rem;
 }
 </style>
-

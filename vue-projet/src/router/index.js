@@ -5,8 +5,11 @@ import LoginView from '@/views/LoginView.vue'
 import SignupView from '@/views/SignupView.vue'
 import Checkoutview from '@/views/Checkoutview.vue'
 import Cart from '../components/Cart.vue'
+import TeamView from '@/views/TeamView.vue'
 
 const routes = [
+
+ 
   {
     path: '/',
     name: 'home',
@@ -44,7 +47,13 @@ const routes = [
     path: '/cart',
     name: 'cart',
     component: Cart
-  }
+  },
+  {
+    path: '/team',
+    name: 'team',
+    component : TeamView
+  }, 
+
 ]
 
 const router = createRouter({

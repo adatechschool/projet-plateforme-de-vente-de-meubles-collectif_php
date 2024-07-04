@@ -38,7 +38,7 @@
   
   <script>
   export default {
-    name: 'Cart',
+    name: 'CartPay',
     data() {
       return {
         cartItems: [
