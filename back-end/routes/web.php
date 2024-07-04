@@ -1,21 +1,41 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-
-
-Route::get('/', function () {
-    return view('welcome');
-});
-// Route::middleware([
-//     'auth:sanctum',
+ //     'auth:sanctum',
 //     config('jetstream.auth_session'),
 //     'verified',
 // ])->group(function () {
 //     Route::get('/dashboard', function () {
 //         return view('dashboard');
 //     })->name('dashboard');
-// });
+
+use Illuminate\Support\Facades\Route;
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+//Route::middleware(['EnsureTokenIsValid'])->group(function () {
+Route::get('/products', function () {
+    $furniture = App\Models\Product::all();
+
+    if (!$furniture) {
+        return 'produit non trouvé';
+    }
+
+    return $furniture;
+})->middleware('EnsureTokenIsValid');
+
+    Route::get('/products', function () {
+        $furniture = App\Models\Product::all();
+
+        if (!$furniture) {
+            return 'produit non trouvé';
+        }
+
+        return $furniture;
+    });
+//});
 
 
 //Chemin pour trouver un utilisateur par ID 
@@ -30,7 +50,7 @@ Route::get('/users/{id}', function ($id) {
 });
 
 //Chemin qui permet de trouver tout les produits
-Route::get('/products', function () {
+/*Route::get('/products', function () {
     $furniture = App\Models\Product::all();
 
     if (!$furniture) {
@@ -39,6 +59,7 @@ Route::get('/products', function () {
 
     return $furniture;
 });
+*/
 
 //Chemin pour trouver les 6 premiers produits 
 Route::get('/products/accueil', function () {
