@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>Liste des produits</h1>
+    <h1 class="text-center mt-5">Liste des produits</h1>
+    
     <!-- Intégration du composant FetchProducts -->
     <FetchProducts />
   </div>

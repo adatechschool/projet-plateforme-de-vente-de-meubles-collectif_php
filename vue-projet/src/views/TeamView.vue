@@ -28,8 +28,8 @@
         teamMembers: [
           { name: 'Anaël', description: 'Le magicien du code, capable de transformer une ligne de bugs en une symphonie de fonctionnalités.' },
           { name: 'Mary', description: 'La reine du design, qui peut rendre une chaise plus stylée que le trône d\'un roi.' },
-          { name: 'Marie', description: 'La détective des bugs, qui traque et élimine les erreurs plus vite qu\'un ninja.' },
-          { name: 'Constance', description: 'La stratège marketing, capable de vendre un tabouret à une girafe.' },
+          { name: 'Constance', description: 'La détective des bugs, qui traque et élimine les erreurs plus vite qu\'un ninja.' },
+          { name: 'Marie', description: 'La stratège marketing, capable de vendre un tabouret à une girafe.' },
           { name: 'Charlène', description: 'La spécialiste UX, qui fait en sorte que votre navigation sur notre site soit aussi fluide qu\'un bon café du matin.' },
           { name: 'Naïma', description: 'La gardienne des serveurs, qui veille à ce que notre site reste debout même si votre canapé ne l\'est pas encore.' }
         ]

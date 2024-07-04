@@ -5,7 +5,7 @@
           <div class="card">
             <div class="row">
             <div class="col-md-6 d-none d-md-block">
-                <img right src="@/assets/img/identifiant.png" alt="icon-login" class="img-fluid">
+                <!-- <img right src="@/assets/img/identifiant.png" alt="icon-login" class="img-fluid"> -->
             </div>
             <div class="card-header">
               <h2>Créer un compte</h2>

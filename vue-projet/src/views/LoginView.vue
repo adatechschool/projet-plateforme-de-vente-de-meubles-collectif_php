@@ -94,7 +94,7 @@
       <div class="card p-4">
         <div class="row">
           <div class="col-md-6 d-none d-md-block">
-            <img src="@/assets/img/deco.png" alt="icon-login" class="img-fluid">
+            <img src="@/assets/img/ConnexionMeuble.png" alt="icon-login" class="img-fluid">
           </div>
           <div class="col-md-6">
             <h2 class="text-center mb-4">Connexion</h2>

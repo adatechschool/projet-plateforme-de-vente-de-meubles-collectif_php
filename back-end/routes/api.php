@@ -44,7 +44,7 @@ Route::apiResource('users', UserController::class);
     Route::put('cart/{id}', [CartController::class, 'update']);
     Route::delete('cart/{id}', [CartController::class, 'destroy']);
 
-<<<<<<< HEAD
+
     // Définition d'une route pour les requêtes OPTIONS
 Route::options('{any}', function (Request $request) {
     // Retourne une réponse JSON vide avec le statut HTTP 204 (No Content)
@@ -84,5 +84,4 @@ Route::get('/products', function () {
         ]
     ];
 });
-=======
->>>>>>> 5bc3c21502a8ea43c78195e3d8ea4bd2a1d34428
+
