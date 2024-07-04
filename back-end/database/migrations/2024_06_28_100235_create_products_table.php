@@ -22,10 +22,11 @@ return new class extends Migration
                 $table->string('material');
                 $table->integer('quantity');
                 $table->string('status');
+                $table->string('image')->nullable(); // Champ pour l'image
     
                 //Définir la clef étrangère
                 $table->foreign('categoryId')->references('id')->on('categories')->onDelete('cascade');
-    
+                $table->timestamps();
     });
 
 }
