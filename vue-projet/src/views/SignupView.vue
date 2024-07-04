@@ -3,6 +3,7 @@
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="card">
+            <div class="row">
             <div class="col-md-6 d-none d-md-block">
                 <img right src="@/assets/img/identifiant.png" alt="icon-login" class="img-fluid">
             </div>
@@ -41,6 +42,7 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
   </template>
   
@@ -73,12 +75,13 @@
   
   <style scoped>
   .container {
-    max-width: 500px;
-    margin-left:30%;
+    max-width: 800px;
+    /* margin-left:30%; */
     /* margin-bottom: %; */
   }
 .card{
-    width: 200%;
+    width: 150%;
+    height: 100%;
 }
   
   .card-header {
@@ -89,9 +92,14 @@
     padding: 20px;
   }
   .img-fluid{
-    max-width: 70%;
+    /* max-width: 70%;
     height: 70%;
-    margin-left: 65%;
+    margin-left: 65%; */
+    max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
      
   }
   </style>

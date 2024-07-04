@@ -39,12 +39,14 @@
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/signup">S'inscrire</router-link>
+
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/checkout">paiement</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/cart">panier</router-link>
+
             </li>
           </ul>
           <form class="d-flex" role="search">

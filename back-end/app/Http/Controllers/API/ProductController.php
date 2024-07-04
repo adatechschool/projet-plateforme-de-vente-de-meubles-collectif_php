@@ -11,68 +11,62 @@ use GuzzleHttp\Exception\RequestException;
 use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
+
 {
-    // Cette méthode ajoute des images aux produits en utilisant l'API de Pexels
+      // Méthode pour récupérer tous les produits
+      public function index()
+      {
+          $products = Product::all();
+          return response()->json($products);
+      }
+  
+    
     public function addImagesToProducts()
     {
-         // Crée une instance de Guzzle HTTP client
-         $client = new Client();
-        
-         // Récupère tous les produits
-         $products = Product::all();
-        
- 
-         // Boucle sur chaque produit
-         foreach ($products as $product) {
-             try {
-                 // Effectue une requête GET à l'API de Pexels
-                 $response = $client->request('GET', 'https://api.pexels.com/v1/search', [
-                     'headers' => [
-                         'Authorization' => 'Bearer '.env('PEXELS_API_KEY') // Utilise la clé API de Pexels
-                     ],
-                     'query' => [
-                         'query' => 'furniture', // Cherche des images de meubles
-                         'per_page' => 1 // Limite les résultats à 1 image par requête
-                     ]
+        $client = new Client(); // Crée une instance de Guzzle HTTP client
+        $products = Product::all(); // Récupère tous les produits
 
-                 ]);
- 
-                 // Décode la réponse JSON
-                 $data = json_decode($response->getBody(), true);
- 
-                 // Vérifie si des images ont été trouvées
-                 if (!empty($data['photos'])) {
-                    
-                    Log::info('Aucun produit trouvé.');
-                     // Récupère l'URL de l'image
-                     $imageUrl = $data['photos'][0]['src']['medium'];
-                     Log::info('Image URL: ' . $imageUrl);
- 
-                     // Met à jour le produit avec l'URL de l'image
-                     $product->update(['image' => $imageUrl]);
-                 }
-             } catch (RequestException $e) {
-                 // Enregistre un message d'erreur dans les logs avec les détails de l'exception
-                 Log::error('RequestException: ' . $e->getMessage());
-                 // Continue to process the next product
-             } catch (\Exception $e) {
-                 // Enregistre un message d'erreur dans les logs avec les détails de l'exception
-                 Log::error('Exception: ' . $e->getMessage());
-                 // Continue to process the next product
-             }
-         }
- 
-         // Retourne une réponse JSON avec un message de succès
-         return response()->json(['message' => 'Images ajoutées aux produits']);
-     }
- 
-    // Cette méthode retourne tous les produits
-    public function index()
-    {
-        $products = Product::all();
-        return response()->json($products);
+        foreach ($products as $product) {
+            try {
+                // Effectue une requête GET à l'API de Unsplash
+                $response = $client->request('GET', 'https://api.unsplash.com/search/photos', [
+                    'headers' => [
+                        'Authorization' => 'Client-ID ' . env('UNSPLASH_ACCESS_KEY') // Utilise la clé d'accès Unsplash depuis le fichier .env
+                    ],
+                    'query' => [
+                        'query' => 'furniture', // Cherche des images de meubles
+                        'per_page' => 1 // Limite les résultats à 1 image par requête
+                    ]
+                ]);
+
+                $data = json_decode($response->getBody(), true); // Décode la réponse JSON
+                Log::info('Unsplash API response: ', $data);
+                if (!empty($data['results'])) {
+                    $imageUrl = $data['results'][0]['urls']['regular']; // Récupère l'URL de l'image
+                    $product->update(['image' => $imageUrl]); // Met à jour le produit avec l'URL de l'image
+                    Log::info('Product updated: ', $product->toArray());
+                } else {
+                    Log::info('No images found for product: ', $product->toArray());
+                }
+            
+            } catch (RequestException $e) {
+                // Enregistre un message d'erreur dans les logs avec les détails de l'exception
+                Log::error('RequestException: ' . $e->getMessage());
+                // Retourne une réponse JSON avec un message d'erreur et un code d'état HTTP 500 (Erreur interne du serveur)
+                return response()->json(['message' => 'Erreur lors de la récupération des images : ' . $e->getMessage()], 500);
+            } catch (\Exception $e) {
+                // Enregistre un message d'erreur dans les logs pour toute autre exception
+                Log::error('Exception: ' . $e->getMessage());
+                // Retourne une réponse JSON avec un message d'erreur et un code d'état HTTP 500 (Erreur interne du serveur)
+                return response()->json(['message' => 'Erreur interne du serveur : ' . $e->getMessage()], 500);
+            }
+        }
+
+        // Retourne une réponse JSON confirmant que les images ont été ajoutées aux produits
+        return response()->json(['message' => 'Images ajoutées aux produits']);
     }
-
+ 
+    
     // Cette méthode crée un nouveau produit
     public function store(Request $request)
     {
