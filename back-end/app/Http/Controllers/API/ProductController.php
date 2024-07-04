@@ -35,7 +35,7 @@ class ProductController extends Controller
                     ],
                     'query' => [
                         'query' => 'furniture', // Cherche des images de meubles
-                        'per_page' => 1 // Limite les résultats à 1 image par requête
+                        'per_page' => 56 // Limite les résultats à 1 image par requête
                     ]
                 ]);
 
