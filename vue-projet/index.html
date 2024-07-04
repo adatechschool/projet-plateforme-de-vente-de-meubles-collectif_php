@@ -8,6 +8,20 @@
   </head>
   <body>
     <div id="app"></div>
+    <h1>Liste des produits</h1>
+    <ul>
+        @foreach ($products as $product)
+            <li>
+                <h2>{{ $product->productName }}</h2>
+                @if ($product->image)
+                    <img src="{{ $product->image }}" alt="{{ $product->productName }}">
+                @else
+                    <p>Aucune image disponible</p>
+                @endif
+                <p>{{ $product->description }}</p>
+            </li>
+        @endforeach
+    </ul>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

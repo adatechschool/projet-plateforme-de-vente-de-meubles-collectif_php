@@ -23,22 +23,25 @@ const router = createRouter({
     },
     {
       path: '/products',
-      name: 'product',
+      name: 'products',
       component: ProductsView
 
 
     },
     {
-      path: '/logins',
+      path: '/login',
       name: 'login',
       component: LoginView
 
     },
     {
-      path: '/signups',
+      path: '/signup',
       name: 'signup',
       component: SignupView
-    }
+    },
+    
+    
+    
   ]
 })
 

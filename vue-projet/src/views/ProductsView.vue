@@ -1,10 +1,22 @@
 <template>
-  <div class="row">
+  <div>
+    <h1>Liste des produits</h1>
+    <!-- Intégration du composant FetchProducts -->
+    <FetchProducts />
   </div>
 </template>
-  
-  <script>
-  export default {
-    name: 'ProductsView',
-  }
-  </script>
+
+<script>
+import FetchProducts from '@/components/FetchProducts.vue'
+
+export default {
+  name: 'ProductsView',
+  components: {
+    FetchProducts,
+  },
+}
+</script>
+
+<style scoped>
+/* Ajoutez vos styles ici si nécessaire */
+</style>
