@@ -39,6 +39,7 @@
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/signup">S'inscrire</router-link>
+
             </li>
             <!-- <li class="nav-item">
               <router-link class="nav-link" to="/checkout">Paiement</router-link>

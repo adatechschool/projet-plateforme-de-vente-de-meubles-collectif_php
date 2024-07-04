@@ -12,8 +12,8 @@ class UserController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        //
+    {        return User::all();
+
     }
 
     /**
@@ -21,7 +21,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        return User::create($request->all());
+
     }
 
     /**
@@ -29,7 +31,9 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+
+        return $user;
+
     }
 
     /**
@@ -37,7 +41,10 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+
+        $user->update($request->all());
+        return $user;
+
     }
 
     /**
@@ -45,6 +52,9 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+
+        $user->delete();
+        return response()->noContent();
+
     }
 }

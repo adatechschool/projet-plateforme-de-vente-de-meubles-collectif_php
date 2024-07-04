@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
 // Route::middleware([
 //     'auth:sanctum',
 //     config('jetstream.auth_session'),
@@ -82,3 +87,4 @@ Route::get('/categories', function () {
 //     return $toto;
 // });
 //git est chiant
+// Anaël est chiant 
