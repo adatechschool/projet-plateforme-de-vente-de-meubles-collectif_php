@@ -4,6 +4,7 @@ import FooterFeed from '@/components/FooterFeed.vue'
 import NavBar from '@/components/NavBar.vue'
 
 
+
 </script>
 
 <template>
@@ -12,7 +13,7 @@ import NavBar from '@/components/NavBar.vue'
     <NavBar />
 
     </div>
-    <Cart />
+
 
 
   <RouterView />

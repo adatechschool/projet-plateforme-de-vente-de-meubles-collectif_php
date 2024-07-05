@@ -4,7 +4,7 @@
   <section id="spitch">
     <div class="container mt-5">
       <div class="col-12">
-        <h2 class="text-center mb-4">Pourquoi le bon meuble ?</h2>
+        <h2 class="text-center mb-4">Pourquoi leBonmeuble ?</h2>
       </div>
     </div>
     <p class="first text-center mr-5 fs-5">
@@ -84,7 +84,8 @@ footer {
   margin: 0 auto;
   padding: 20px;
 }
-#spitch
+
+#spitch,
 #products {
   text-align: center;
 }
@@ -114,10 +115,10 @@ footer {
 
 .img-fluid {
   width: 100%;
-  height: 160pxo;
+  height: 160px;
 }
 
-Responsive adjustments @media (max-width: 768px) {
+@media (max-width: 768px) {
   .product-item {
     flex: 1 1 calc(50% - 20px); /* Ajuste pour deux éléments par ligne sur des écrans moyens */
     max-width: calc(50% - 20px);

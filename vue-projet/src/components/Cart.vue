@@ -3,6 +3,7 @@
       <div class="col-12 ">
         <h2 class="text-center mb-4">Votre Panier</h2>
         <div class="card p-3">
+          
           <table class="table table-bordered">
             <thead class="thead-light">
               <tr>
@@ -35,16 +36,21 @@
       </div>
     </div>
   </template>
-  
+
   <script>
+  // import Cart from './Cart.vue';  
   export default {
     name: 'CartPay',
     data() {
       return {
         cartItems: [
-          { name: 'Pomme', quantity: 3, unitPrice: 1.00 },
-          { name: 'Banane', quantity: 5, unitPrice: 0.50 },
-          { name: 'Orange', quantity: 2, unitPrice: 1.20 }
+          { name: 'Lit', quantity: 3, unitPrice: 1.00 },
+          { name: 'Chaise', quantity: 5, unitPrice: 0.50 },
+          { name: 'Table', quantity: 2, unitPrice: 1.20 },
+          { name: 'Canapé', quantity: 1, unitPrice: 200 },
+          { name: 'Canapé lit', quantity: 1, unitPrice: 1020 },
+          { name: 'Table basse', quantity: 1, unitPrice: 80 },
+          { name: 'Chaise haute', quantity: 4, unitPrice: 50 }
         ]
       };
     },
