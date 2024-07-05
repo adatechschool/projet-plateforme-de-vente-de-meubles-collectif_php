@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>Products</h1>
+     
       <form></form>
       <ul>
         <li v-for="product in products" :key="product.id">

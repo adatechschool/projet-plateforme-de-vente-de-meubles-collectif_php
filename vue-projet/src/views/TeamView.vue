@@ -3,6 +3,8 @@
       <div class="col-12">
         <h2 class="text-center mb-4">Notre équipe</h2>
         <div class="row">
+
+          <img src="@/assets/img/photo-grp.jpg" class="img-fluid mb-5" />
             
           <div class="col-md-4 mb-4" v-for="member in teamMembers" :key="member.name">
             <div class="card">

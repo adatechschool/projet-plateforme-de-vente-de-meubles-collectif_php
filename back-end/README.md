@@ -7,60 +7,59 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# LebonMeuble - Site E-commerce de Vente de Meubles
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Description
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+LebonMeuble est un site e-commerce spécialisé dans la vente de meubles, développé avec Laravel, Vue.js et Bootstrap. Il offre une plateforme intuitive pour les utilisateurs cherchant à acheter des meubles de qualité.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Fonctionnalités
 
-## Learning Laravel
+-   Page d’accueil
+-   Navbar
+-   Catalogue de produits avec navigation par catégories
+-   Système d'authentification et de création de compte des utilisateurs
+-   Panier d'achats avec gestion des commandes
+-   Intégration de paiement sécurisé (à implémenter)
+-   Footer
+-   Création des bases de données
+-   Création Routes
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Technologies utilisées
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-   **Backend** : Laravel (PHP)
+-   **Frontend** : Vue.js, Bootstrap
+-   **Base de données** : Site_de_meubles
+-   **Autres outils** : PostMan, Axios, GitHub, Trello
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Prérequis
 
-## Laravel Sponsors
+-   PHP >= 8.3
+-   Laravel version 11.11.1, composer
+-   Vue.js
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Installation
 
-### Premium Partners
+Clonez le repository : git@github.com:adatechschool/projet-plateforme-de-vente-de-meubles-collectif_php.git
+Installez les dépendances PHP avec Composer : composer install
+Installez les dépendances Vue.js avec npm : npm install
+Exécutez les migrations pour créer les tables de base de données : php artisan migrate
+Démarrez les serveurs de développement : php artisan serve (Back), npm run dev (Front)
+Accédez à votre application à l'adresse indiquée par le serveur de développement (par défaut : `http://localhost:8000`).
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Contribution
 
-## Contributing
+-   Fork et clonez ce repository.
+-   Créez une nouvelle branche (`git checkout -b amelioration-fonctionnalite`).
+-   Faites vos modifications et committez-les (`git commit -am 'Ajout d'une nouvelle fonctionnalité'`).
+-   Push vers la branche (`git push origin amelioration-fonctionnalite`).
+-   Créez une Pull Request.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Auteurs
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   Anaël
+-   Mary
+-   Naïma
+-   Constance
+-   Charlène
+-   Marie
